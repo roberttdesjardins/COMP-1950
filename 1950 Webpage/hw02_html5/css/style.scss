@@ -13,7 +13,7 @@ a {
 /* Header */
 header {
   padding-bottom: 4rem;
-  background: red;
+  background: $background-color-1;
 
   #home_button {
     float: left;
@@ -38,7 +38,7 @@ header {
 
 /* Content */
 main {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
   background: $background-color-1;
 }
@@ -61,14 +61,15 @@ h2 {
   }
 
   .place-text {
-    background: #666666;
+    //background: #666666;
+    margin-right: 1rem;
   }
 }
 
 /* Screen Sizes 1000px and under */
-@media(max-width: 1000px) {
+@media(max-width: 1100px) {
   header {
-    padding-bottom: .4rem;
+    padding-bottom: 0.5rem;
     text-align: center;
     #home_button {
       float: none;
@@ -85,6 +86,25 @@ h2 {
       }
     }
   }
+  h2 {
+    margin-top: 0;
+  }
+  .place {
+    .image {
+      figure {
+        margin: 0;
+      }
+    }
+    .place-text {
+      padding: 0 1rem;
+      h3 {
+        margin-top: 0.2rem;
+      }
+    }
+  }
+}
+
+@media(max-width: 700px) {
   .place {
     flex-direction: column;
     .image {
