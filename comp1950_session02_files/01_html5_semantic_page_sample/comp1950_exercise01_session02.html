@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+notes: a demonstration of using HTML5 semanticaly
+
+HTML5 doctype used above 
+-->
+<head>	
+	<title>BeerIsGood.ca</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet"
+		  href="css/style.css" />
+</head>
+<body>
+	<!-- 
+NOTE: you can and should still use div
+tags for their 'semantic free' qualities
+eg: for page layout containers 
+	-->
+	<div>
+		<!--
+		<header>
+		page header content goes here
+		likely the same header is used on all pages
+		-->
+		<header>
+			<h1>BeerIsGood.ca</h1>
+			<img 	src="images/product_lineup.jpg" 
+					alt="BeerIsGood Product Lineup" />
+		</header>
+		<!--
+		<nav>
+		site navigation should use <nav>		
+		-->
+		<nav>
+			<!--
+			<ul>
+			always use a list
+			for your site navigation links
+			-->
+			<ul>
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Tour Our brewery</a></li>	
+				<li><a href="#">Contact us</a></li>
+			</ul>			
+		</nav>
+		<!-- 
+		<main>
+		primary content area
+		contains content NOT shared by other pages
+		-->
+		<main>
+			<!-- 
+			<section>
+			each section should have its own heading 
+			this section for introducting the company			
+			-->
+			<section>
+				<h2>Lower Mainland's Finest</h2>
+				<p>BeerIsGood is the lower mainland's premiere make-believe craft brewery! Pellentesque dapibus elementum molestie. Proin elementum ante ac risus ornare, a vehicula justo maximus. Donec eu turpis molestie, ornare nisi et, fermentum lectus. </p>
+			</section>
+			<!-- 
+			<section>
+			each section should have its own heading 
+			this section for introducting the products
+			-->			
+			<section>
+				<h2>Our Top Three Signature Beers:</h2>
+				<ol>
+					<li>
+						<!-- 
+						<article>
+						self-contained content
+						could stand on its own separate from the rest of the page content
+						could be syndicated
+						-->
+						<article>
+							<h3>Reddish Radish Beer</h3>
+							<p>Made from red radishes. It tastes terrible, but it packs a whallop! Sed a bibendum libero. In fringilla urna eget libero ullamcorper tincidunt. Phasellus malesuada sodales tortor congue congue. Etiam a commodo orci. Quisque tempus sem mi, eu commodo nisi convallis rhoncus. Maecenas et purus quam. </p>
+							<!-- 
+							<figure>, <figcaption>
+							use a <figure> when non-textual data (eg: images, code samples, etc)
+							is referred to in the text.
+							
+							add a <figcaption> to describe the figure	
+							-->
+							<figure>
+								<!-- 
+								always add descriptive alt="" 
+								to any images that contribute to page content
+								-->
+								<img alt="Reddish Radish Beer"
+									 src="images/reddish_radish.jpg" />
+									 
+								<figcaption>Reddish Radish Beer</figcaption>
+							</figure>
+						</article>
+					</li>
+					<li>
+						<article>
+							<h3>Happy Hops</h3>
+							<p>This brew is so hop-heavy you may wonder if we included any other ingredients (we did, but its mostly hops)! Nam pellentesque nunc augue, quis tincidunt dui tristique id. Sed feugiat lobortis consequat. Maecenas quis quam sed ex luctus consequat sit amet id tellus.</p>
+							<figure>
+								<img 	alt="Happy Hops Beer"
+										src="images/happy_hops.jpg" />
+								<figcaption>Happy Hops Beer</figcaption>
+							</figure>
+						</article>
+					</li>
+					<li>
+						<article>
+							<h3>Black Hole Beer</h3>
+							<p>So dark and dense, it bends the fabric of time-space around your glass! Also, quite tasty. Pellentesque finibus fermentum sem, vel lobortis felis vestibulum cursus. Fusce magna nibh, ullamcorper iaculis pulvinar nec, eleifend sit amet arcu. In risus elit, eleifend non leo vitae, mollis ultricies mauris. Quisque porttitor tincidunt interdum. Quisque nec sem lorem.</p>
+							<figure>
+								<img 	alt="Black Hole Brew"
+										src="images/black_hole.jpg" />
+								<figcaption>Black Hole Brew</figcaption>
+							</figure>
+						</article>
+					</li>					
+				</ol>
+			</section>
+			<!--
+			<aside>
+			content that is tangential to the 
+			main topic of the page
+			
+			could be removed without compromising the page content
+			-->
+			<aside>
+				<ul>
+					<li><a href="#"><img src="images/twitter.jpg" alt="twitter" /></a></li>
+					<li><a href="#"><img src="images/facebook.jpg" alt="facebook" /></a></li>
+					<li><a href="#"><img src="images/rss.jpg" alt="rss" /></a></li>
+				</ul>
+			</aside>
+			<!-- 
+			you can include any number of items
+			in a figure/figcaption tag set...
+			-->
+			<!--
+			<figure class="multibeer">
+				<img alt="Reddish Radish Beer"
+					 src="images/reddish_radish.jpg" />
+				<img alt="Happy Hops Beer"
+					 src="images/happy_hops.jpg" />
+				<img alt="Black Hole Brew"
+					 src="images/black_hole.jpg" />
+				<figcaption>From left to right: Reddish Radish Beer, Happy Hops Beer, Black Hole Brew</figcaption>
+			</figure>
+			-->
+		</main>
+		<!--
+		<footer>
+		footer info goes here
+		footers are often shared across multiple HTML pages
+		-->
+		<footer>
+			<p>Copyright BeerIsGood.ca &copy; 2016</p>
+			<p><a href="#">site map</a></p>
+			<p>Email us at <a href="#">admin@beerisgood.ca</a></p>
+		</footer>
+		
+	</div>
+</body>
+	
+</html>
+
