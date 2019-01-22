@@ -1,0 +1,94 @@
+/* General */
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #111111;
+}
+
+/* Header */
+header {
+  padding-bottom: 4rem;
+  background: red;
+}
+
+header #home_button {
+  float: left;
+  padding: 1rem;
+  margin: 0;
+}
+
+header nav {
+  float: right;
+}
+
+header nav ul {
+  margin: auto;
+  padding-top: 1.4rem;
+}
+
+header nav ul li {
+  display: inline;
+  padding: 0 1rem;
+}
+
+/* Content */
+main {
+  max-width: 1000px;
+  margin: auto;
+  background: #f1f1f1;
+}
+
+h2 {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.place {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.place .image figcaption {
+  text-align: center;
+  padding: 0;
+  background: #e1e1e1;
+}
+
+.place .place-text {
+  background: #666666;
+}
+
+/* Screen Sizes 1000px and under */
+@media (max-width: 1000px) {
+  header {
+    padding-bottom: .4rem;
+    text-align: center;
+  }
+  header #home_button {
+    float: none;
+  }
+  header nav {
+    float: none;
+  }
+  header nav ul {
+    margin: 0;
+    padding: 0;
+  }
+  header nav ul li {
+    padding: .4rem;
+  }
+  .place {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .place .image {
+    margin: auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */
