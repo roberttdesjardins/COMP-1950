@@ -1,3 +1,4 @@
+/* Robert Desjardins */
 /* General */
 body {
   margin: 0;
@@ -8,10 +9,14 @@ a {
   color: #111111;
 }
 
+ul {
+  list-style: none;
+}
+
 /* Header */
 header {
   padding-bottom: 4rem;
-  background: #f1f1f1;
+  background: #c9ad8d;
 }
 
 header #home_button {
@@ -31,7 +36,16 @@ header nav ul {
 
 header nav ul li {
   display: inline;
+}
+
+header nav ul li a {
   padding: 0 1rem;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+header nav ul li a:hover {
+  color: #5a7050;
 }
 
 /* Content */
@@ -52,17 +66,31 @@ h2 {
   display: flex;
 }
 
+.place .image img {
+  display: block;
+}
+
 .place .image figcaption {
   text-align: center;
   padding: 0;
   background: #e1e1e1;
+  border-top: #111111 solid 2px;
 }
 
 .place .place-text {
   margin-right: 1rem;
 }
 
-/* Screen Sizes 1000px and under */
+.place .place-text a {
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+}
+
+.place .place-text a:hover {
+  color: #307596;
+}
+
+/* Screen Sizes 1100px and under */
 @media (max-width: 1100px) {
   header {
     padding-bottom: 0.5rem;
@@ -78,8 +106,8 @@ h2 {
     margin: 0;
     padding: 0;
   }
-  header nav ul li {
-    padding: .4rem;
+  header nav ul li a {
+    padding: 0.8rem;
   }
   h2 {
     margin-top: 0;
@@ -95,6 +123,7 @@ h2 {
   }
 }
 
+/* Screen Sizes 700px and under */
 @media (max-width: 700px) {
   .place {
     -webkit-box-orient: vertical;

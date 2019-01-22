@@ -1,5 +1,7 @@
-$background-color-1: #f1f1f1;
+/* Robert Desjardins */
 
+$background-color-1: #f1f1f1;
+$background-color-2: #c9ad8d;
 /* General */
 body {
   margin: 0;
@@ -10,10 +12,14 @@ a {
   color: #111111;
 }
 
+ul {
+  list-style: none;
+}
+
 /* Header */
 header {
   padding-bottom: 4rem;
-  background: $background-color-1;
+  background: $background-color-2;
 
   #home_button {
     float: left;
@@ -30,7 +36,13 @@ header {
 
       li {
         display: inline;
-        padding: 0 1rem;
+        a {
+          padding: 0 1rem;
+          transition-duration: 300ms;
+          &:hover {
+            color: #5a7050;
+          }
+        }
       }
     }
   }
@@ -53,20 +65,29 @@ h2 {
   display: flex;
 
   .image {
+    img{
+      display: block;
+    }
     figcaption {
       text-align: center;
       padding: 0;
       background: #e1e1e1;
+      border-top: #111111 solid 2px;
     }
   }
 
   .place-text {
-    //background: #666666;
     margin-right: 1rem;
+    a {
+      transition-duration: 250ms;
+      &:hover {
+        color: #307596;
+      }
+    }
   }
 }
 
-/* Screen Sizes 1000px and under */
+/* Screen Sizes 1100px and under */
 @media(max-width: 1100px) {
   header {
     padding-bottom: 0.5rem;
@@ -81,7 +102,9 @@ h2 {
         margin: 0;
         padding: 0;
         li {
-          padding: .4rem;
+          a {
+            padding: 0.8rem;
+          }
         }
       }
     }
@@ -104,6 +127,7 @@ h2 {
   }
 }
 
+/* Screen Sizes 700px and under */
 @media(max-width: 700px) {
   .place {
     flex-direction: column;
