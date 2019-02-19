@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<!--
+a page for demonstrating box model width and height
+-->
+	<head>
+		<title>CSS box model: width and height</title>
+		<link rel="stylesheet" href="css/04_width_height.css" />
+	</head>
+	<body>
+
+	<div id="container">
+
+	<h1>CSS box model: width and height</h1>
+	<p>Block elements are 100% width by default.</p>
+	<p>CSS precentages with width refer to the available space, as determined by the parent container.</p>
+
+		<div id="default-width">Default Width is 100% of the available space</div>
+		<div id="percent-width">Percentage Width (set to 75%)</div>
+		<div id="fixed-width">Fixed Width (500px;)</div>
+
+		<div id="default-height">Default Height is determined by content, padding, border</div>
+		<div id="fixed-height">
+			Fixed Height (500px;)
+			<div id="percent-height">Percentage Height determined by parent container (100%). Note how it is exactly as tall as the parent, even if overlaping occurs.</div>	
+		</div>
+		<br />
+		<h2>Browser height</h2>
+		<p>The grey container div is set to 100% height, but since percentage height is determined by the parent element, it is only as tall as the body/html.</p>
+		<p>An HTML document is only as tall as the content requires. To make it be as tall as the browser, the html and body tags should also be set to 100% height.</p>
+	</div>
+
+	</body>
+</html>

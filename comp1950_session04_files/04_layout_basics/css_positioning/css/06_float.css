@@ -1,0 +1,81 @@
+
+/*
+EXAMPLE 6
+CSS Floating
+------------------------------------
+*/
+div[class="float_example"]{
+	background-color:beige;
+	border:solid 1px black;
+	width:220px;
+}
+
+/*
+swap the floatings between
+float:left; and float:right;
+to examine the browser behavior
+*/
+	#box01{
+		float:left;
+	}
+	#box02{
+		float:left;
+	}
+	#box03{
+		float:right;
+	}
+	#not-floating{
+		background-color:burlywood;
+		width:100%;
+		/* using clear:both; will make 
+			non-floated content more
+			predictable
+		*/
+	/*	clear:both;	*/
+	}
+
+	/*
+	now demonstrating nested floating...
+	*/	
+	[class^="parent"], [class^="child"]{
+		border:solid 1px black;		
+	}
+	.child_floated{
+		background-color:beige;
+		width:150px;
+		float:left;
+	}	
+	/*
+	parents will collapse on floated child tags
+	note how .parent_not_floated is noto visible 
+	(due to collapsing)
+	*/	
+	.parent_not_floated{
+		background-color:burlywood;
+		
+	}	
+	/*
+	parents will collapse on floated child tags
+	fix #1, add a semantic free div as the LAST child, 
+	and apply clear:both; 	
+	*/
+	.clear{
+		clear:both;		
+	}
+	/*
+	parents will collapse on floated child tags
+	fix #2, add overflow:auto; to the collapsing parent 	
+	*/	
+	.parent_overflow_auto{
+		background-color:burlywood;
+		overflow:auto;
+	}	
+	/*
+	parents will collapse on floated child tags
+	fix #3, float the parent as well as the child
+		*/	
+	.parent_floated{
+		background-color:burlywood;
+		float:left;
+		width:100%;
+	}

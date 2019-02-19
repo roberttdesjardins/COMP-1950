@@ -1,0 +1,146 @@
+/*
+convert this page to a more fluid layout
+- start with the fixed width #container: change the fixed width to a variable width. do the same with the fixed width 'nav ul' 
+- using the initial 800px fixed with as the context, calculate new widths and margins for the section and aside tags.
+- target / context = result
+- use media queries to restyle the navigation to a single column stack in clients 
+*/
+/* add this to .css for Windows Mobile IE */
+@-ms-viewport {
+	width:device-width;
+}
+body{
+	font-size:16px;
+	font-family: arial, helvetica, sans-serif;
+	margin:0px;
+	background-color: #eee;
+}
+/* page content goes here */
+section{
+	box-sizing:	border-box;
+	background-color: #7ad;
+	padding:10px;
+	/* padding on right makes room for the 'aside' */
+	/*
+	redefine the width from 188px...
+	
+	target / context = result
+	220px / 800px = 0.275 (27.5%)	
+	*/		
+	margin-right:27.5%;
+}
+section img{
+	/* images inside the section */
+	margin:0px 0px 5px 0px;
+	border:dashed 1px #036;
+	
+	/* */
+	max-width:100%;
+	height:auto;
+}
+/* aside is positioned to the right of the 'section' */
+aside{
+	/*
+	redefine the width from 188px...
+	
+	target / context = result
+	188px / 800px = 0.235 (23.5%)	
+	*/
+	width:23.5%;
+	padding:10px;
+	position:absolute;
+	top:135px;
+	right:10px;
+	border:dashed 1px white;
+	background-color: #036;
+	color:white;	
+}
+aside h3{
+	margin-top:0px;
+}
+/* navigation list code */
+nav ul{
+	width: 100%;
+	list-style-type:none;
+	margin-top:0px;
+	padding-left: 0;
+	margin-left: 0;
+	background-color: #036;
+	color: White;
+	float: left;
+}
+nav ul li { 
+	display: inline; 
+}
+nav ul li a	{
+	padding: 0.2em 1em;
+	background-color: #036;
+	color: White;
+	text-decoration: none;
+	float: left;
+	border-right: 1px solid #fff;
+}
+nav ul li a:hover	{
+	background-color: #369;
+	color: #fff;
+}
+header{
+	background-color: #258;
+	color:white;
+	padding:20px 0px 0px 0px;
+	border:solid 2px #7ad;
+	border-width: 0px 0px 2px 0px;
+	text-align:center;	
+}
+header h1{
+	margin-top:0px;	
+}
+/* a simple footer */
+footer{
+	background-color: #036;
+	color: white;
+	text-align:center;
+	width: 100%;
+	
+}
+footer p{
+	margin:0px;
+}
+/* the page container is fixed width centered */
+#container{
+	width:90%;
+	margin-left:auto;
+	margin-right:auto;
+	position:relative;
+	background-color: #7ad;
+}
+/* when client gets too thin,
+	move the aside to the bottom of the page
+	and let content be as wide as can be
+ */
+@media screen and (max-width:820px){
+	section{
+		margin-right:0px;
+		width:100%;
+	}
+	aside{
+		box-sizing:	border-box;
+		width:100%;	
+		/* override the absolute positioning */		
+		position:relative;
+		top:0px;
+		left:0px;		
+	}	
+}
+/*
+	when the horizontal nav can no longer fit width-wise,
+	change it to a vertical stack
+*/
+@media screen and (max-width:650px){
+	nav ul li a	{
+		box-sizing:	border-box;
+		width:100%;
+		display:block;
+		border-bottom: 1px solid #fff;		
+	}
+}

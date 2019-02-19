@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">	
+	<head>
+		<title>EM and REM</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>	
+	<body>	
+		<h1>EM and REM</h1>
+		<p><a href="https://j.eremy.net/confused-about-rem-and-em/">EM and REM</a> are relative measurements that can be especially useful in responsive designs. Note that each of them will inherit their sizing differently. In general, EM proves most useful, since if a parent changes in size, you usually desire its children to adjust their size proportionally. The 'R' in REM stands for 'Root', describing how it will use the &lt;html> root tag for relative sizing.</p>
+		<article id="em">
+			<h2>EM</h2>
+			<p>EM values inherit from their nearest parent or ancestor.</p>
+			<ol>
+			   <li>Lorem ipsum dolor sit amet.</li>
+			   <li>Aliquam tincidunt mauris eu risus.
+				<ul>
+					<li>Lorem ipsum dolor sit amet.</li>
+					<li>Aliquam tincidunt mauris eu risus.
+						<ul>
+						<li>Lorem ipsum dolor sit amet.</li>
+						<li>Aliquam tincidunt mauris eu risus.</li>
+						</ul>
+					</li>
+				</ul>
+			   </li>
+			   <li>consectetuer adipiscing elit.</li>
+			</ol>
+		</article>
+		<article id="rem">
+			<h2>REM</h2>
+			<p>REM values inherit from the &lt;html> root</p>
+			<ol>
+			   <li>Lorem ipsum dolor sit amet.</li>
+			   <li>Aliquam tincidunt mauris eu risus.
+				<ul>
+					<li>Lorem ipsum dolor sit amet.</li>
+					<li>Aliquam tincidunt mauris eu risus.
+						<ul>
+						<li>Lorem ipsum dolor sit amet.</li>
+						<li>Aliquam tincidunt mauris eu risus.</li>
+						</ul>
+					</li>
+				</ul>
+			   </li>
+			   <li>consectetuer adipiscing elit.</li>
+			</ol>
+		</article>
+	</body>	
+</html>

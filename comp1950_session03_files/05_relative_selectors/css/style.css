@@ -1,0 +1,84 @@
+body{
+	font-family:"arial", sans-serif;	
+}
+section{
+	border:3px dotted black;
+	margin:5px;
+	padding:5px;
+}
+aside{
+	border:1px dotted black;
+	padding:5px;
+}
+
+/* 
+descendant selectors
+can reduce the need for excessive .classes and #ids
+	(select all descendants of the root selector)
+eg: target only navigation li and a tags
+*/
+nav li{
+	list-style: none;
+	margin: 0;
+	border-top: 1px solid gray;
+	display: inline;
+}
+
+nav li a{
+	padding: 0.25em 0.5em 0.25em 0.75em;
+	border-left: 1em solid #AAB;
+	background: #CCD;
+	text-decoration: none;
+}
+nav li a:link { 
+	color: #448; 
+}
+nav li a:visited { 
+	color: #667; 
+}
+nav li a:hover{
+	border-color: #FE3;
+	color: #FFF;
+	background: #332;
+}
+footer p{
+	text-align:center;
+}
+section a{
+	text-decoration:none;	
+	font-weight:bold;
+	color:#AAB;
+}
+section a:hover{
+	color: #332;
+	text-decoration:underline;
+}
+
+/*
+child selector
+	(select all tags that are children of the root tag)	
+*/
+aside > ul{
+	border:3px double black;
+} 
+li > ul{
+	border:3px double yellow;
+}
+/* 
+adjacent sibling selector 
+	select the next 'p' tag sibling following the root selector.
+	if the next sibling after the 'h3' is NOT a 'p' tag,
+	do not apply black border.
+	
+*/
+h3 + p{
+	border:10px solid black;
+}
+/* 
+general sibling selector 
+	select all 'p' tag siblings following the root selector
+		
+*/
+h3 ~ p{
+	background-color:lightyellow;
+}

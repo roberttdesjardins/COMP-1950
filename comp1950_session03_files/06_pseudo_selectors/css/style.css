@@ -1,0 +1,108 @@
+nav li{
+	list-style: none;
+	margin: 0;
+	border-top: 1px solid gray;
+	display: inline;
+}
+nav li a{
+	padding: 0.25em 0.5em 0.25em 0.75em;
+	border-left: 1em solid #AAB;
+	background: #CCD;
+	text-decoration: none;
+}
+/*
+standard pseudo classes for 
+	:link
+	:visited 
+	:hover
+	:active
+*/
+nav li a:link { 
+	color: #448; 
+}
+nav li a:visited { 
+	color: #667; 
+}
+nav li a:hover{
+	border-color: #FE3;
+	color: #FFF;
+	background: #332;
+}
+nav li a:active{
+	border-color: #000;
+	color:  #332;
+	background:#FE3;
+}
+table, table td{
+	border:1px solid black;
+}
+footer p{
+	text-align:center;
+}
+section, aside{
+	border: 1px solid black;
+	padding:5px;
+	margin:5px;
+}
+section > p{
+	font-family:"verdana", sans-serif;
+}
+/* 
+:first-letter style the first character of the selector
+
+you can also chain pseudoclasses with colons : between each
+*/
+section > p:first-of-type:first-letter{
+	font-size:2.25em;
+	border:solid 1px black;	
+	padding:0px 2px;
+	margin:5px 5px;
+	font-family:"times new roman", serif;
+	font-weight:bold;
+	float:left;
+}
+/*
+nth-child() can target tags based on sequence
+
+beware: styling that depends on sequence in the HTML structure 
+may result in hard to maintain pages 
+(if the structure changes, the style may be mis-applied)
+*/
+tr:nth-child(3){	/* target the third tr */
+	color:white;
+	font-weight:bold;
+	font-style:italic;
+}
+/*
+using (n) with nth-child() 
+allows the browser to assign the count 
+*/
+tr:nth-child(2n){	/* target all even numbered tr */
+	background-color:#aad;
+}
+tr:nth-child(2n + 1){ 	/* target all odd numbered tr */
+	background-color:#ccd;
+}
+
+/*
+nth-of-type() based on tag type
+eg: the second p tag 
+*/
+p:nth-of-type(2){
+	background-color:#aad; /* purple */
+}
+/*
+nth-child() based on sequence
+eg: the second child, if its a p tag 
+*/
+p:nth-child(2){
+	background-color:#ccd; /* grey */
+	border:solid 3px black;
+}
+/*
+before and after: can be used with content:
+to add textual data to the HTML from CSS
+*/
+aside h4:after{
+	content:": Content can be provided by CSS";
+}

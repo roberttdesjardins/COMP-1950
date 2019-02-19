@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>	
+	<head>
+		<title>Responsive Images Example</title>
+		<meta charset="utf-8" />
+ 	    <link rel="stylesheet" href="css/style.css" />
+	</head>	
+	<body>	
+
+	<h1>Responsive Images Example</h1>	
+	<h2>Optimal Image Selection</h2>
+	<p>Use the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture">picture</a> tag to provide multiple images for a client to choose from. Each <code>picture</code> tag requires one or more <code>source</code> tags and its last child must be an <code>img</code>.</p>
+	<p>Attributes for the <code>source</code> tag.</p>
+	<ul>
+		<li><code>srcset</code> the path to the image</li>
+		<li><code>media</code> a media query that determines if the image is used</li>
+		<li><code>type</code> define the MIME type of the image. if a client does not support the type, the image will not be used</li>		
+	</ul>
+	<pre><code>&lt;picture>
+	
+  &lt;-- source tags provide options for client -->		  
+  &lt;source srcset="images/medium_res.jpg"
+	  media="(min-width: 400px) AND (max-width:800px)">
+  &lt;source srcset="images/low_res.jpg"
+	  media="(min-width: 0px) AND (max-width:399px)">
+		  
+  &lt;-- img tag defines default -->		  
+  &lt;img src="images/high_res_default.jpeg" alt="" >
+  
+&lt;/picture></code></pre>
+
+	<h2>Scalable Images</h2>
+	<p>Images will show actual size by default. To scale images according to the parent container and maintain the aspect ratio, use <code>max-width:100%;</code> and <code>height:auto;</code></p>
+	<pre><code>img{
+	/* apply to scale images with the parent */
+	max-width: 100%;
+	height:auto;
+}</code></pre>				
+	<p>Change the width of the viewport to see how the images below behave. Check the source code for the CSS for details.<p>	
+		
+	<!-- 
+	
+	https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture
+	
+	the <picture> tag
+	allows the client to choose which image is suitable
+	must have <img> as last child
+	-->
+	
+	<picture>
+	<!-- 
+	one or more <source> children define images to choose
+		srcset="" required. path to the image 
+		media=""  media query for determining when to choose an image
+	-->
+	  <source srcset="images/med_res.jpg"
+			  media="(min-width: 400px) AND (max-width:800px)">
+	  <source srcset="images/low_res_good_framing.jpg"
+			  media="(min-width: 0px) AND (max-width:399px)">
+	<!-- 
+	must be last child of <picture>
+	this image will be displayed if:
+		- no <source> media queries are true
+		- browser does not support <picture> tag
+	-->
+	  <img src="images/high_res.jpg" alt="Two bicyclists racing across a wide open expanse." >
+	</picture>	
+	
+	<p>The following CSS will display images actual size, but will allow the images to scale if the containing element is reduced in size.</p>
+
+
+	<aside>
+		<img src="./images/pic01.jpg" alt="pic01.jpg" />
+		<img src="./images/pic02.jpg" alt="pic02.jpg" />
+		<img src="./images/pic03.jpg" alt="pic03.jpg" />
+		<img src="./images/pic04.jpg" alt="pic04.jpg" />				
+	</aside>
+
+	</body>	
+</html>

@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+/* 
+not all font types are supported in all browsers.
+maximize compatibility by offering several versions
+of your preferred font 
+
+provide a comma delimited list of font types
+client browsers will request the one they prefer
+*/
+@font-face {
+    font-family: 'rubikregular';
+    src: url('../fonts/rubik-regular-webfont.woff2') format('woff2'),
+         url('../fonts/rubik-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+	font-family:"rubikregular", sans-serif;	
+}

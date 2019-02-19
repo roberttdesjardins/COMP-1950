@@ -1,0 +1,145 @@
+/* include padding and borders in box model sizes */
+*{
+	box-sizing:border-box;	
+}
+body{
+	background-color:#F78F1E;	
+	font-family:"verdana", sans-serif;	
+}
+h1, h2, h3, h4, h5, h6{
+	font-family:"cambria", serif;	
+}
+section img{
+	border-radius:90%;
+	margin-top:10px;
+	border:solid 1px black;
+}
+section h1{
+	/* 
+	deal with fixed px paddings in the same way...
+		100 / 960 = 0.10416666
+	*/
+	padding-left:10.4166%;	
+}
+small{
+	position:relative;
+	bottom:10px;		
+}
+#wrapper{
+	/* 
+	replace the 960px fixed width		
+	with a variable width container (eg: 90%)
+	
+	since other page elements have been sized
+	according to the fixed width of this container,
+	their primary context value will be 960px	
+	*/
+	width:90%;
+	
+	margin:36px auto;
+	background-color:#EDF4F5;
+	padding-bottom:10px;
+	border:double 3px #054950;
+	border-top:solid 2px #054950;
+	border-bottom:solid 2px #054950;
+	/* overflow:auto; keeps the #wrapper from collapsing 
+		on its floated child tags */
+	overflow:auto;	
+}
+section{
+	margin:0 auto 53px;
+	/* 
+	convert fixed pixel dimensions into 
+	scalable, relative % with the formula:
+		target / context = result
+		
+		900 / 960 = 0.9375
+		0.9375 = 93.75%
+	*/	
+	width:93.75%;	
+}
+
+main{
+	float:left;
+	/* 
+	note: new context 
+		'main' is inside the formerly 900px 'section' 	
+	convert fixed pixel dimensions into 
+	scalable, relative % with the formula:
+		target / context = result
+		
+		650 / 900 = 0.7222222222222
+		0.7222222222222 = 72.22222222222%
+	*/
+	width:72.222222%;
+}
+article{
+	background-color:#789A9F;
+	padding:9px;
+	border:double 3px #054950;
+	border-top:solid 2px #054950;
+	border-bottom:solid 2px #054950;
+	margin-top:10px;	
+	overflow:auto;
+}
+aside{
+	float:right;
+	/* 
+	note: context 
+		'aside' is inside the formerly 900px 'section' 	
+	convert fixed pixel dimensions into 
+	scalable, relative % with the formula:
+		target / context = result
+		
+		250 / 900 = 0.2777777777
+		0.2777777777 = 27.77%
+	*/	
+	width:27.77777%;
+	padding:10px;
+}
+aside h2{
+	margin-top:0px;
+	border-top:dotted 1px #054950;
+}
+aside ul{
+	list-style-type:none;
+	padding:0px;
+}
+aside li {
+	border-bottom:dotted 1px #054950;
+	padding-bottom:5px;
+	margin-bottom:5px;
+}
+aside a{
+	color:#054950;
+	font-weight:bold;
+	text-decoration:none;
+}
+aside a:hover{
+	color:#F78F1E;	
+}
+
+/*
+add a couple of media queries to fix a few 
+layout issues in thin clients
+*/
+@media screen and (max-width:890px){
+	/* change to a single column stack */
+	main{
+		width:100%;
+	}
+	aside{
+		width:100%;
+	}
+}
+@media screen and (max-width:515px){
+	#wrapper{
+		width:95%;
+	}
+	section img{
+		position:absolute;
+		top:10px;
+		left:1px;		
+		width:50px;		
+	}
+}

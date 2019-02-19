@@ -1,0 +1,53 @@
+/*
+style particular divs
+*/
+body{
+	/*
+	add 
+	margin:0px;
+	to the body to remove
+	the spaces at the edges of the viewport
+	*/
+	/*	margin:0px; */
+}
+#wrapper{
+	background-color:lightyellow;
+}
+div>h1{
+	margin-top:0px;
+}
+div[id^="box"]{
+	padding-bottom:50px;
+	clear:both;
+}
+div[class]{
+	background-color:yellow;
+	width:100px;
+	border: solid 1px black;
+}
+/*
+set no margins between the meeting box models
+*/
+.lefty{		margin-right:	0px;	float:left;			}		
+.righty{	margin-left:	0px;	float:left;			}
+.upside{	margin-bottom:	0px;						}
+.downside{	margin-top:		0px;						}
+
+/*
+set some margins for horizontaly meeting margins
+*/
+#box_c>.lefty{
+	margin-right:40px;
+}
+#box_c>.righty{
+	margin-left:60px;
+}
+/*
+set some margins for verticaly meeting margins
+*/
+#box_d>.upside{
+	margin-bottom:19px;
+}
+#box_d>.downside{
+	margin-top:20px;
+}

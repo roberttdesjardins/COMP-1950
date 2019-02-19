@@ -1,0 +1,17 @@
+/*
+EXAMPLE 4
+Mixing Absolute and Relative Positioning
+------------------------------------
+*/
+#absolute_pos{
+	background-color:pink;
+	width:200px;
+	position:absolute;
+	bottom:10px;
+	right:10px;
+}
+.relative_pos{
+	background-color:lightblue;
+	padding:5px;
+	position:relative;
+}

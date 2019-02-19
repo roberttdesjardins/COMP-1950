@@ -1,0 +1,45 @@
+
+/* 
+first, a good, old fashioned HTML selector... 
+it selects all div tags
+*/
+div{
+	width:400px;
+	color:#7A3E48;
+	background-color:#EECD86;
+	font-family:arial;
+	font-size:.85em;
+	padding:10px;
+	float:left;
+}
+img{
+	float:right;
+}
+/*
+now, add your own rules to make the 
+HTML on the left match the image on the right...
+*/
+
+header h1 acronym {
+	border: 1px solid black;
+}
+
+section > p:first-letter {
+	font-size: 2rem;
+}
+
+section > p > strong:first-of-type {
+	border: 1px solid white;
+}
+
+section > p > strong:nth-of-type(2) {
+	background: white;
+}
+
+section > p > abbr {
+	background: yellow;
+}
+
+#events_main, #events_other {
+	background: rgb(224, 146, 0);
+}

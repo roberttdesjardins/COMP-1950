@@ -1,0 +1,80 @@
+/*
+styles that have no media query requirements will 
+of course be applied in all cases, 
+unless the media query rules should override
+rules declared here
+*/
+body{
+	color:white;
+}
+/* add this to .css for Windows Mobile IE */
+@-ms-viewport {
+	width:device-width;
+}
+/* 
+if you are concerned about css rules cascading throughout
+multiple media queries, define both boundaries in the
+compound query, eg
+	@media only screen and (min-width:600px) and (max-width:1024px)
+will only apply styles to viewports with between 600px-1024px width available 
+*/
+/* and now the media queries... */
+/* 
+for devices thinner than typical laptops,
+eg: smartphones
+*/
+@media screen and (max-width:499px){
+	#widescreen{		display:none;	}
+	#fullscreen{		display:none;	}
+	#medium{			display:none;	}
+	#thin{				display:block;	}
+	body{	background-color:teal;	}
+}
+/* for low res desktop/laptop */
+@media screen and (min-width:500px)and (max-width:1023px){
+	#widescreen{		display:none;	}
+	#fullscreen{		display:none;	}
+	#medium{			display:block;	}
+	#thin{				display:none;	}
+	body{	background-color:yellow;	color:black; }
+}
+/* for typical desktop/laptop arrangements */
+@media screen and (min-width:1024px) and (max-width:1599px){
+	#widescreen{		display:none;	}
+	#fullscreen{		display:block;	}
+	#medium{			display:none;	}
+	#thin{				display:none;	}
+	body{	background-color:darkslategray;	color:white}
+}
+/* for nice, wide screens with plenty of resolution */
+@media screen and (min-width:1600px){
+	#widescreen{		display:block;	}
+	#fullscreen{		display:none;	}
+	#medium{			display:none;	}
+	#thin{				display:none;	}
+	body{	background-color:darkslateblue;	}
+}
+/*
+determine the viewport height, 
+display the appropriate content 
+*/
+@media screen and (min-height:500px){
+	#tall{	display:inline;	}
+	#short{	display:none;	}
+}
+@media screen and (max-height:499px){
+	#tall{	display:none;	}
+	#short{	display:inline;	}
+}
+
+/*
+style by orientation... 
+*/
+@media screen and (orientation:portrait){
+	#landscape{	display:none;	}
+	#portrait{	display:inline;	}
+}
+@media screen and (orientation:landscape){
+	#landscape{	display:inline;	}
+	#portrait{	display:none;	}
+}

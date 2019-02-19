@@ -1,0 +1,44 @@
+/*
+set a font-size to the root html tag
+*/
+html{
+	font-size:2.75em;
+}
+article{
+	width:30%;
+	float:left;
+}
+#em{	background-color:#bcbcbc;	}
+#rem{	background-color:#ededed;	}
+
+/*
+EM values inherit from their nearest parent or ancestor.
+*/
+
+#em ol{
+	/* based on the <html lang="en"> font-size */
+	font-size:.5em;
+}
+#em ol > li > ul{
+	/* based on the ancestor <ol> font-size */
+	font-size:.5em;
+}
+#em ol > li > ul > li > ul{
+	/* based on the parent <ul> font-size, etc */
+	font-size:.5em;
+}
+/*
+REM values inherit directly from the root html tag font-size.
+*/
+#rem ol{
+	/* based on the <html lang="en"> font-size */
+	font-size:.5rem;
+}
+#rem ol > li > ul{
+	/* based on the <html lang="en"> font-size */
+	font-size:.5rem;
+}
+#rem ol > li > ul > li > ul{
+	/* based on the <html lang="en"> font-size */
+	font-size:.5rem;
+}

@@ -1,0 +1,21 @@
+/* load reset rules first */
+@import url("reset.css");
+
+/*
+add your styles AFTER loading the CSS reset styles
+
+if the reset has removed all margins, padding, etc,
+you will need to rebuild them now.
+*/
+
+h1, h2, h3, h4, h5, h6{
+	font-weight:bold;	
+	margin:10px 5px;
+}
+h1{	font-size:2em;	}
+h2{	font-size:1.8em;}
+h3{	font-size:1.6em;}
+h4{	font-size:1.4em;}
+p{ 	margin:5px 10px;}
+
+

@@ -1,0 +1,53 @@
+@import url("normalize.css");
+html{
+	box-sizing:border-box;
+}
+*{
+	box-sizing:inherit;
+}
+
+/* 
+flexbox makes a sticky footer easy to implement
+*/
+#wrapper{
+	/* first apply flex box layout to the wrapper */
+	display: flex;
+	/* min-height:100vh will keep the page content at least
+	   as tall as the browser, but allow it to be taller */		
+	min-height: 100vh;
+	/* a simple single column stack will do for the basic layout */
+	flex-direction: column;
+}
+
+main{
+ 	/* 
+	since the flex-direction is a vertical column
+		flex:1;
+	will ensure main takes up all available space 
+	this will push the footer to the bottom of the page
+	when the content in main wouldnt otherwise 	
+	
+	if content in main is taller then the browser, 
+	main will push the footer to the bottom of the page scroll
+	*/
+	flex: 1;
+}
+
+header{
+	background-color:#B098A4;	
+	text-align:center;
+}
+nav{
+	background-color:#747572;
+	color:#E5EBEA;
+	text-align:center;
+}
+main{
+	background-color:#45503B;
+	color:#E5EBEA;
+	padding:10px;
+}
+footer{
+	background-color:#B098A4;
+	text-align:center;
+}

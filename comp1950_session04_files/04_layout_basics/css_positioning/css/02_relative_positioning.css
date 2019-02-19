@@ -1,0 +1,23 @@
+/*
+EXAMPLE 2
+Relative Positioning
+------------------------------------
+*/
+#relative_positioning{
+	background-color:brown;
+	color:white;
+	width:400px;
+	/*
+	always begin positioning with 
+	declaration of position:type;
+			position:relative;
+	then one or two coordinates:
+			top: 
+			bottom: 
+			left: 
+			right:
+	*/
+	position:relative;
+	top:250px;
+	left:50px;
+}

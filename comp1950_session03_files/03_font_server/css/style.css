@@ -1,0 +1,12 @@
+@charset "utf-8";
+/*
+if the HTML loads the font from a server
+CSS can apply the font.
+
+its still a good idea to declare a fall-back, 
+in case the font server is down or slow
+*/
+body{
+	/* use font server font, or cursive fall-back */
+	font-family: 'Supermercado One', cursive;	
+}

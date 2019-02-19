@@ -1,0 +1,100 @@
+/*
+convert this page to a more fluid layout
+- start with the fixed width #container: change the fixed width to a variable width. do the same with the fixed width 'nav ul' 
+- using the initial 800px fixed with as the context, calculate new widths and margins for the section and aside tags.
+- target / context = result
+- use media queries to restyle the navigation to a single column stack in clients 
+*/
+/* add this to .css for Windows Mobile IE */
+@-ms-viewport {
+	width:device-width;
+}
+body{
+	font-size:16px;
+	font-family: arial, helvetica, sans-serif;
+	margin:0px;
+	background-color: #eee;
+}
+/* page content goes here */
+section{
+	background-color: #7ad;
+	padding:10px;
+	/* padding on right makes room for the 'aside' */
+	margin-right:220px;
+}
+section img{
+	/* images inside the section */
+	margin:0px 0px 5px 0px;
+	border:dashed 1px #036;
+}
+/* aside is positioned to the right of the 'section' */
+aside{
+	width:188px;
+	padding:10px;
+	position:absolute;
+	top:135px;
+	right:10px;
+	border:dashed 1px white;
+	background-color: #036;
+	color:white;	
+}
+aside h3{
+	margin-top:0px;
+}
+/* navigation list code */
+nav ul{
+	width: 800px;
+	list-style-type:none;
+	margin-top:0px;
+	padding-left: 0;
+	margin-left: 0;
+	background-color: #036;
+	color: White;
+	float: left;
+}
+nav ul li { 
+	display: inline; 
+}
+nav ul li a	{
+	padding: 0.2em 1em;
+	background-color: #036;
+	color: White;
+	text-decoration: none;
+	float: left;
+	border-right: 1px solid #fff;
+}
+nav ul li a:hover	{
+	background-color: #369;
+	color: #fff;
+}
+header{
+	background-color: #258;
+	color:white;
+	padding:20px 0px 0px 0px;
+	border:solid 2px #7ad;
+	border-width: 0px 0px 2px 0px;
+	text-align:center;	
+}
+header h1{
+	margin-top:0px;	
+}
+/* a simple footer */
+footer{
+	background-color: #036;
+	color: white;
+	text-align:center;
+	width: 800px;
+}
+footer p{
+	margin:0px;
+}
+/* the page container is fixed width centered */
+#container{
+	width:800px;
+	margin-left:auto;
+	margin-right:auto;
+	position:relative;
+	background-color: #7ad;
+}
+
+

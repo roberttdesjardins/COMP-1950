@@ -90,6 +90,11 @@ h2 {
   color: #307596;
 }
 
+/* Footer */
+footer {
+  text-align: center;
+}
+
 /* Screen Sizes 1100px and under */
 @media (max-width: 1100px) {
   header {

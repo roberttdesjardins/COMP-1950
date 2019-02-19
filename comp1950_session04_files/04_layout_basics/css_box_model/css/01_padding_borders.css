@@ -1,0 +1,29 @@
+/*
+Example 1
+	by default, padding and borders are 
+	added to the dimensions of the box model
+*/
+#nopadding_noborder{
+	background-color:orange;
+	width:100px;
+	height:25px;
+}		
+#nopadding_withborder{
+	background-color:orange;
+	width:100px;
+	height:25px;
+	border: solid 10px black;
+}		
+#withpadding_noborder{
+	background-color:orange;
+	width:100px;
+	height:25px;
+	padding-left:100px;
+}		
+#withpadding_withborder{
+	background-color:orange;
+	width:100px;
+	height:25px;
+	padding-left:100px;
+	border: solid 10px black;
+}

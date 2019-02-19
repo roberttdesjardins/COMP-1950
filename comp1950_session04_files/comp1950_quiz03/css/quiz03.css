@@ -1,0 +1,45 @@
+/*
+comp1950 quiz 3
+add your styles here...
+*/
+
+section p:first-of-type::first-letter {
+    font-size: 2rem;
+    border: 1px solid black;
+}
+
+section a[target="_blank"] {
+    background-color: rgb(238, 238, 215);
+    color: black;
+}
+
+table tr:nth-of-type(2n+1) td {
+    background-color: rgb(249, 219, 189);
+}
+
+
+table tr:nth-of-type(2n) td {
+    background-color: rgb(237, 231, 177);
+}
+
+/*  
+some basic styles to set the page up...
+*/
+section:first-of-type{
+    font-family: "helvetica", sans-serif;
+    width:300px;
+    border:solid 2px black;
+    padding:10px;
+    background-color:burlywood; 
+    float:left;
+}
+section:last-of-type{
+    float:right;
+}
+a{
+    color:white;
+    font-weight:bold;
+}
+table{
+    width:100%;
+}

@@ -1,0 +1,106 @@
+@charset "utf-8";
+/* CSS Document */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	background-color: #ccc;
+	margin: 0;
+}
+/*
+make the header a flex container
+and use justify-content to position the 
+h1 and the nav ul at opposite ends of the container
+*/
+header {
+	background-color: #2F68DC;
+	padding: 20px;
+}
+/*
+make the nav ul a flex container
+to make list items flow horizontally
+*/
+header nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	
+}
+
+/*
+make <main> a flex box container
+so all columns (.col-) will be flex items
+*/
+main {
+		
+}
+/*
+use flex: <number>; to assign widths to each column
+the middle column should be 
+3 times as wide as the two side columns 
+*/
+
+
+/*
+some basic styles, no 'flex' work needed below
+*/
+main .col-01 {
+	background-color: #B0E6F9;	
+}
+main .col-02 {
+	background-color: #FCC7FC;	
+}
+main .col-03 {
+	background-color: #FDFDC4;	
+}
+main article {
+	padding: 0 20px	
+}
+footer {
+	background-color: #2F68DC;	
+	padding: 20px;
+	color: #fff;
+}
+header nav a {
+	display: block;
+	padding-left: 20px;
+	padding-right: 20px;
+	line-height: 42px;
+	color: #2F68DC;
+	background-color: #fff;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-size: 19px;
+	border-left: 2px solid #2F68DC;	
+}
+
+header nav a:hover,
+header nav a:focus,
+header nav a:active {	
+	background-color: #DCDCDC;
+}
+
+h1, h2, h3 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;		
+}
+.wrapper {
+	max-width: 1200px;
+	min-width:700px;
+	margin: 0 auto;
+	background-color: #fff;	
+}
+header h1 {
+	margin: 0;	
+}
+
+header a {
+	color: #fff;
+	text-decoration: none;	
+}
+
+header nav button {
+	display: none;	
+}

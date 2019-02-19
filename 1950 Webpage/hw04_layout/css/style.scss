@@ -1,0 +1,131 @@
+/* load reset rules first */
+@import url("../../css/normalize.css");
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  ul {
+    list-style-type: none;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  background-color: #071d5a;
+  color: #d6d6d6;
+  #branding {
+    font-size: 1.1rem;
+  }
+  nav {
+    li {
+      display: inline;
+      padding-left: 1rem;
+
+      a {
+        &:link {
+          color: #d6d6d6;
+        }
+
+        &:visited {
+          color: #afafaf;
+        }
+
+        &:hover {
+          color: #faaa15;
+        }
+      }
+    }
+  }
+}
+
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+
+
+#content {
+  flex: 1;
+  display: flex;
+
+  #sidenav {
+    flex: 1;
+    padding-top: 40vh;
+    ul {
+      padding: 0;
+    }
+
+    li {
+      padding-top: 1rem;
+      font-size: 1.2rem;
+      text-align: center;
+
+      a {
+        &:link {
+          color: #222222;
+        }
+
+        &:visited {
+          color: #858585;
+        }
+
+        &:hover {
+          color: #1f0fad;
+        }
+      }
+    }
+  }
+
+  main {
+    flex: 4;
+    padding-right: 3rem;
+    .container {
+      display: flex;
+      h1 {
+        flex: 1;
+      }
+      div {
+        display: flex;
+        padding-top: 1rem;
+      }
+    }
+    form {
+      fieldset {
+        display: flex;
+        flex-direction: column;
+        max-width: 20rem;
+      }
+    }
+  }
+}
+
+table {
+  tr:nth-of-type(2n) {
+    background-color: #a29cc479;
+  }
+  tr:nth-of-type(2n+1) {
+    background-color: #684eff7e;
+  }
+}
+
+
+
+footer {
+  background-image: url("http://www.elsa-belgium.org/wp-content/uploads/2014/12/footer-background-011-1.jpg");
+  display: flex;
+  justify-content: center;
+  p {
+    color: #e4e4e4;
+  }
+  a {
+    margin: 1rem;
+    color: #e4e4e4;
+  }
+}

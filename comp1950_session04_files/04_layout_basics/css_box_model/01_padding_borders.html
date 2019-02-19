@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS box model: padding and border</title>
+		<link rel="stylesheet" href="css/01_padding_borders.css" />
+	</head>
+	<body>
+		<h1>CSS box model: padding and border</h1>
+		<p>In CSS, padding and border widths are added to box model dimensions. Each of the boxes below have been assigned a 100px fixed width.</p>
+		<div id="nopadding_noborder">box a</div>
+		<p>100px width + no padding + no border = 100px wide</p>
+		<hr />
+		<div id="nopadding_withborder">box b</div>
+		<p>100px width + no padding + 10px border-left + 10px border-right = 120px wide</p>
+		<hr />
+		<div id="withpadding_noborder">box c</div>
+		<p>100px width + 100px padding-left + no border = 200px wide</p>
+		<hr />
+		<div id="withpadding_withborder">box d</div>
+		<p>100px width + 100px padding-left + 10px border-left + 10px border-right = 220px wide</p>
+	</body>
+</html>

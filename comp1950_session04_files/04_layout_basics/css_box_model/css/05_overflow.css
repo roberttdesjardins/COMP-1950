@@ -1,0 +1,7 @@
+div{
+	background-color:burlywood;
+	border:solid 1px black;
+	height:200px;
+
+	overflow:hidden;	
+}

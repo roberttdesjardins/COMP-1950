@@ -1,0 +1,28 @@
+body{
+	font-family:"verdana", sans-serif;
+}
+html {
+	/* load the image */
+	background-image: url(../images/paris.jpg);
+	
+	/* dont let the image scroll */
+	background-attachment: fixed;
+		
+	/* 
+	fill the container width and height
+	without stretching or skewing
+	*/
+	background-size: cover;
+	
+	/*
+	you can use background-position:
+	to adjust the positioning of the image
+	*/
+}
+
+section{
+	padding:10px;
+	background-color:white;
+	border:3px double black;
+	width:500px;
+}

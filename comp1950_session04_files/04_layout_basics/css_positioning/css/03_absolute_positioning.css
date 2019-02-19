@@ -1,0 +1,25 @@
+/*
+EXAMPLE 3
+Absolute Positioning
+------------------------------------
+*/
+#absoute_position{
+	background-color:brown;
+	color:white;
+	width:400px;		
+/*
+always begin positioning with 
+declaration of position:type;
+		position:absolute;
+then two coordinates:
+		top: 
+		bottom: 
+		left: 
+		right:
+*/
+	position:absolute;
+	top:0px;
+	right:0px;	
+	margin:0px 0px 0px 0px; 
+}
+			

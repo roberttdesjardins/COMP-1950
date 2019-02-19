@@ -1,0 +1,80 @@
+
+/* 
+first, a good, old fashioned HTML selector... 
+it selects all div tags
+*/
+div{
+	width:400px;
+	color:#7A3E48;
+	background-color:#EECD86;
+	font-family:arial;
+	font-size:.85em;
+	padding:10px;
+	float:left;
+}
+img{
+	float:right;
+}
+/*
+now, add your own rules to make the 
+HTML on the left match the image on the right...
+*/
+
+/* select abbr tags */
+abbr{
+	background-color:yellow;	
+}
+
+/* select em tags that descend from strong tags */
+strong em{
+	background-color:white;
+}
+
+/* select acronym tags that descend from a tags */
+a acronym{
+	border:dashed 1px #7A3E48;
+	background-color:#E18942;
+	
+}
+
+/* select uls that are inside other uls */
+ul ul{
+	color:white;
+}
+
+/* select strong tags that are children of p tags */
+p>strong{
+	border:solid 1px white;
+}
+
+/* select only ul tags that have id attributes */
+ul[id]{
+	background-color:#E18942;
+}
+
+/* select acronym tags that have title attributes */
+acronym[title]{
+	border:solid 1px #7A3E48;
+	text-decoration:none;
+}
+
+/* select a tags whose href attributes end with ".ca/" */
+a[href$=".ca/"]{
+	background-color:white;
+	font-weight:bold;
+}
+
+/* select the first character of all p tags */
+p:first-letter{
+	font-size:2em;
+}
+
+/*  
+select the last child li tags that are children of 
+#events_main
+AND
+#events_other
+*/
+#events_main>li:last-child, #events_other>li:last-child{
+	border:solid 1px yellow;
+}

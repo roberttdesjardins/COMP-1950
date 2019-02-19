@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<!--
+a page for demonstrating box model width and height
+-->
+	<head>
+		<title>CSS box model: containing block tags</title>
+		<link rel="stylesheet" href="css/03_containing_blocks.css" />
+	</head>
+	<body>
+
+	<h1>CSS box model: containing block tags</h1>
+	<p>A common 'rule of thumb' for HTML is that block tags don't usually contain other block tags as children. Sometimes this rule must be broken, for example, when using the generic <code>div</code> tag to contain content. Doing this is a structurally valid use of HTML, but does have some odd 'behavioral' effects.</p>
+	<p>In the examples below... block parents are colored <span style="background-color:black;color:white;">black</span>, block children are highlighted <span style="background-color:yellow">yellow</span></p>
+	<h2>Top of parent container...</h2>
+	<ol>
+		<li>with no margin or padding on either parent or child, note how the child is positioned at the top of the parent container. use your browser diagnostic tool to identify the current <code>margin</code> of the child. Note how the margin appears to 'escape' the parent. 
+		<div id="parent_01">
+			<h3 id="child_of_parent_01">Block Tag Child</h2>
+		</div>
+		<br />
+		</li>
+		<li>now a small <code>padding-top</code> is added to the parent. note how the child's <code>margin</code> now asserts itself within the parent container!
+		<div id="parent_02">
+			<h3 id="child_of_parent_02">Block Tag Child</h2>
+		</div>
+			<br />
+		</li>
+		<li>remember you can always 'regain control' by altering the margins of the child, for example, by setting <code>margin-top</code> to be zero px. 
+			<div id="parent_03">
+			<h3 id="child_of_parent_03">Block Tag Child</h2>
+			</div>	
+				<br />
+		</li>
+		</ol>
+		<h2>Bottom of parent container...</h2>
+		<ol>
+		<li>once again, neither parent nor child are being assigned margins/padding. this time however,  the parent container's height is NOT set, so it is exactly as tall as it needs to be for its child
+			<div id="parent_04">
+			<h3 id="child_of_parent_04">Block Tag Child</h2>
+			</div>	
+				<br />
+		</li>
+		<li>this time, the parent container's <code>padding-bottom</code> has been set to one px, note how the same effect on the child's margins occurs 
+			<div id="parent_05">
+			<h3 id="child_of_parent_05">Block Tag Child</h2>
+			</div>	
+				<br />
+		</li>
+		<li>as before, fix these issues by altering the child's <code>margin-bottom</code>
+			<div id="parent_06">
+			<h3 id="child_of_parent_06">Block Tag Child</h2>
+			</div>	
+				<br />
+		</li>
+	</ol>
+
+	</body>
+</html>

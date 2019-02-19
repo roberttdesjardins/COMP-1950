@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* 
+EXERCISE: 
+add a CSS media query to the bottom of this document.
+restyle the flexbox for clients that are less than 600px wide
+
+see comment at bottom of page for details
+
+NOTE: the following 3 selectors are Flex containers:
+	header
+	nav ul
+	main
+*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	background-color: #ccc;
+	margin: 0;
+}
+h1, h2, h3 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;		
+}
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	background-color: #fff;	
+}
+header h1 {
+	margin: 0;	
+}
+header a {
+	color: #fff;
+	text-decoration: none;	
+}
+header nav button {
+	display: none;	
+}
+
+header nav a {
+	display: block;
+	padding-left: 20px;
+	padding-right: 20px;
+	line-height: 42px;
+	color: #2F68DC;
+	background-color: #fff;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-size: 19px;
+	border-left: 2px solid #2F68DC;	
+}
+header nav a:hover,
+header nav a:focus,
+header nav a:active {	
+	background-color: #DCDCDC;
+}
+main article {
+	padding: 0 20px	
+}
+
+footer {
+	background-color: #2F68DC;	
+	padding: 20px;
+	color: #fff;
+}
+/*
+------------------------------------
+here are the flex containers:
+*/
+header {
+	background-color: #2F68DC;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;	
+}
+header nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	display: flex;	
+}
+main {
+	display: flex;	
+}
+/* flex items */
+.col-01 {	background-color: #B0E6F9;	}
+.col-02 {	background-color: #FCC7FC;	}
+.col-03 {	background-color: #FDFDC4;	}
+.col-02 {	
+	/* the middle column is 3x as wide as the sidebars */
+	flex: 3;	
+}
+.col-01, .col-03 {
+	/* sidebars are 1/3 the width of the center column */
+	flex: 1;	
+}
+
+/*
+NOTE: add your media queries here
+
+when client is less than 600px wide,
+change display to a vertical stack
+	
+	use flex-direction: to display flex items as
+	a column instead of a row...	
+	
+	use order: to locate the sidebars 
+	below the central section of content
+*/
+

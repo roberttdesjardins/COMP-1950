@@ -1,0 +1,32 @@
+
+/*
+EXAMPLE 5
+CSS Fixed Position
+------------------------------------
+*/
+#fixed{
+	background-color:beige;
+	border:solid 1px black;
+	padding:5px;
+	width:200px;
+	/*
+	bind the element to the
+	top right of the browser viewport...
+	*/
+	position:fixed;
+	top:90px;
+	right:0px;
+}
+#not_fixed{
+	/*
+	since fixed content is out of normal flow
+	not fixed content may overlap with it
+	*/
+	 /* margin-right:200px; */
+}
+
+header{
+	margin:0px;
+	background-color:white;
+	width:100%;
+}

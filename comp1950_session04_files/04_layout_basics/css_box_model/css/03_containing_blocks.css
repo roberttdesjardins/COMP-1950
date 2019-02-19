@@ -1,0 +1,23 @@
+
+div[id^="parent"]{
+	background-color:black;
+	height:50px;
+}
+h3[id^="child"]{
+	background-color:yellow;
+}
+#parent_02, #parent_03{
+	padding-top:1px;
+}
+#child_of_parent_03{
+	margin-top:0px;
+}
+#parent_04, #parent_05, #parent_06{
+	height:auto;
+}
+#parent_05, #parent_06{
+	padding-bottom:1px;
+}
+#child_of_parent_06{
+	margin-bottom:0px;
+}

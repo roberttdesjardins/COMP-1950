@@ -1,0 +1,50 @@
+/*
+if the parent container dipslays as flex,
+the children will be treated as flex items
+*/
+#flexbox{
+	list-style-type:none;
+	/*
+	display:flex;
+		display this parent as a flex container,
+		ensuring its children are flex items
+	*/
+	display:flex;
+	/*
+	flex-flow: <direction> <wrap>
+		define the direction and wrap characteristics
+	<direction>s:
+		row (default): left to right in ltr; right to left in rtl
+		row-reverse: right to left in ltr; left to right in rtl
+		column: same as row but top to bottom
+		column-reverse: same as row-reverse but bottom to top
+	<wrap>s:
+		nowrap (default): single-line / left to right in ltr; right to left in rtl
+		wrap: multi-line / left to right in ltr; right to left in rtl
+		wrap-reverse: multi-line / right to left in ltr; left to right in rtl
+	*/
+	flex-flow:row wrap; 
+	/*
+	justify-content:<alignment>;
+		use to determine how the flex items will orient
+	<alignment>s:
+		flex-start (default): items are packed toward the start line
+		flex-end: items are packed toward to end line
+		center: items are centered along the line
+		space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+		space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has its own spacing that applies.	
+	*/
+	justify-content:center;
+}
+/* 
+these children of the flex box will act as flex items
+*/	
+#flexbox li{
+	background-color:lightgreen;
+	width:150px;
+
+	border:solid 1px black;
+	margin:10px;
+	
+	text-align:center;
+}		

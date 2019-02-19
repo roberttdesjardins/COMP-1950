@@ -1,0 +1,114 @@
+/* add this to .css for Windows Mobile IE */
+@-ms-viewport {
+	width:device-width;
+}
+/*
+if the parent container dipslays as flex,
+the children will be treated as flex items
+*/
+#flexbox{
+	list-style-type:none;
+	padding:0px;
+	/*
+	display:flex;
+		display this parent as a flex container,
+		ensuring its children are flex items
+	*/
+	display:flex;
+	/*
+	flex-flow: <direction> <wrap>
+		define the direction and wrap characteristics
+	<direction>s:
+		row (default): left to right in ltr; right to left in rtl
+		row-reverse: right to left in ltr; left to right in rtl
+		column: same as row but top to bottom
+		column-reverse: same as row-reverse but bottom to top
+	<wrap>s:
+		nowrap (default): single-line / left to right in ltr; right to left in rtl
+		wrap: multi-line / left to right in ltr; right to left in rtl
+		wrap-reverse: multi-line / right to left in ltr; left to right in rtl
+	*/
+	flex-flow:row wrap; 
+	/*
+	justify-content:<alignment>;
+		use to determine how the flex items will orient
+	<alignment>s:
+		flex-start (default): items are packed toward the start line
+		flex-end: items are packed toward to end line
+		center: items are centered along the line
+		space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+		space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has its own spacing that applies.	
+	*/
+	justify-content:center;
+}
+/* 
+these children of the flex box will act as flex items
+*/	
+#flexbox li{
+	background-color:lightgreen;
+	width:150px;
+	min-height:150px;
+	border:solid 1px black;
+	margin:10px;
+	line-height:150px;
+	text-align:center;
+	/* border-box will make sizing easier */
+	box-sizing:border-box;
+}
+/* 
+these media queries will detect when the viewport
+causes a 'word wrap' effect on one or more of the flex items
+
+uncomment the css below to test it
+*/
+/*
+@media screen and (min-width:1258px) and (max-width:1377px){	
+	#flexbox li{
+		background-color:red;
+	}
+ 	#flexbox li:nth-last-child(1){
+		width:1180px;
+	}	
+}
+@media screen and (min-width:1088px) and (max-width:1257px) {	
+	#flexbox li{
+		background-color:lightblue;
+	}	
+	#flexbox li:nth-last-child(1), #flexbox li:nth-last-child(2){
+		width:490px;
+	}
+}
+@media screen and (min-width:865px) and (max-width:1087px){	
+	#flexbox li{
+		background-color:teal;
+	}	
+	#flexbox li:nth-last-child(1), #flexbox li:nth-last-child(2), #flexbox li:nth-last-child(3){
+		width:260px;
+	}	
+}	
+@media screen and (min-width:696px) and (max-width:864px){	
+	#flexbox li{
+		background-color:blue;		
+	}	
+}
+@media screen and (min-width:589px) and (max-width:695px){	
+	#flexbox li{
+		background-color:yellow;
+	}	
+	#flexbox li:nth-last-child(1), #flexbox li:nth-last-child(2){
+		width:230px;
+	}		
+}
+@media screen and (min-width:433px) and (max-width:588px){	
+	#flexbox li{
+		background-color:lightyellow;
+		width:45%;
+	}	
+}
+@media screen and (max-width:432px){	
+	#flexbox li{
+		background-color:grey;
+		width:100%;
+	}	
+}
+*/

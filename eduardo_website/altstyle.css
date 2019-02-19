@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+}
+
+#header {
+  text-align: center;
+  background-color: #333333;
+  padding: 1rem 0;
+  margin-bottom: 1.5rem;
+}
+
+#header #sitetitle {
+  color:#ffffff;
+  font-size: 2rem;
+}
+
+#header #subtitle {
+  color: #dadada;
+  font-size: 1.2rem;
+}
+
+.leftcolbox {
+  float: left;
+  width: 160px;
+}
+
+.leftcolbox h2 {
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.leftcolbox p {
+  text-align: left;
+  padding: 0 0 1rem .8rem;
+}
+
+.leftcolbox p a {
+  text-decoration: none;
+}
+
+.leftcolbox p a:link {
+  color: #333333;
+}
+
+.leftcolbox p a:visited {
+  color: #000000;
+}
+
+.leftcolbox p a:hover {
+  color: #b36e2e;
+}
+
+#maincol {
+  background-color: #a5a5a5;
+  margin: 10px 30px 10px 160px;
+  padding: 20px;
+  box-shadow: 0 0 10px black;
+}
+
+#maincol .heading {
+  text-align: center;
+}
+
+#maincol p:nth-of-type(2n+1):first-letter {
+  font-size: 1.8rem;
+}
+
+#maincol p {
+  margin-left: 1rem;
+}
+
+#maincol img[src*="dog"] {
+  display: block;
+  margin: auto;
+}
+
+#bttmbar {
+  text-align: center;
+}

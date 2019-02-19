@@ -1,0 +1,40 @@
+*{
+	font-family:"helvetica";
+	color:#565656;
+}
+/* style any images that have alt attributes */
+img[alt]{
+	border:4px solid black;
+}
+li a{
+	font-weight:bold;
+}
+/* style all absolute links 
+	(those that begin with "http")
+*/
+a[href^="http"]{
+	background-color:lightyellow;
+}
+/* 
+style secure protocol absolute links 
+with a padlock icon
+	(those that begin with "https")
+*/
+a[href^="https"]{	
+	background-image:url("../images/secure.gif");
+	background-repeat:no-repeat;
+	padding-left:25px;
+}
+/* target all a tags with 'bcit' in the href URL*/
+a[href*="bcit"]:after{
+	content: " (BCIT resource)";
+}
+a[href$=".pdf"]:after{
+	content: " * Adobe PDF Document *";
+}
+a[href$=".xls"]:after{
+	content: " * Microsoft Excel Spreadsheet *";
+}
+a[href$=".zip"]:after{
+	content: " * ZIP Compressed File *";
+}

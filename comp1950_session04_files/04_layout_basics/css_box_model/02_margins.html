@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<!-- 
+a page for demonstrating margins in CSS
+-->
+	<head>
+		<title>CSS box model: margins</title>
+		<link rel="stylesheet" href="css/02_margins.css" />
+	</head>
+	<body>
+	<div id="wrapper">
+		<h1>CSS box model: margins</h1>
+		<h2>&lt;body> Margin</h2>
+		<p>The &lt;body> tag atually has margins of its own. If left to the default, this will cause a space between your page content and the edges of the viewport. Note how this page content is contained by #wrapper, which is colored light yellow. Also note how the white color of the viewport is visible above and at the sides of #wrapper.</p>
+		<p>Apply <code>margin:0px;</code> to the &lt;body> to remove this space.</p>
+
+		
+		<h2>Meeting Margins</h2>
+		<p>In CSS meeting horizontal margins are added, while meeting vertical margins collapse to the largest value of the two.</p>
+
+		<div id="box_a">
+			<h2>a: horizontal meeting margins 0px + 0px = 0px horizontal distance between elements</h2>
+			<div class="lefty">horiztonal</div>
+			<div class="righty">margins</div>
+		</div>
+
+
+		<div id="box_b">
+			<h2>b: vertical meeting margins 0px + 0px = 0px vertical distance between elements</h2>
+			<div class="upside">vertical</div>
+			<div class="downside">margins</div>
+		</div>
+
+		<div id="box_c">
+			<h2>c: horizontal meeting margins 40px + 60px = 100px horizontal distance between elements</h2>
+			<div class="lefty">horiztonal</div>
+			<div class="righty">margins</div>
+		</div>
+
+		<div id="box_d">
+			<h2>d: vertical meeting margins 10px + 20px = 20px  vertical distance between elements</h2>
+			<div class="upside">vertical</div>
+			<div class="downside">margins</div>
+		</div>
+	</div>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/*
+apply these two CSS rules to all images 
+that you want to scale with the parent container
+*/
+img{
+	/* fill the parent container */
+	max-width:100%;
+	/* ensure the height to maintain aspect ratio  */
+	height:auto;	
+}
+
+/*
+note how if a parent container (like the aside here)
+changes size, the images within will resize accordingly
+*/
+aside{
+	border:solid 2px black;	
+	width:380px;
+}
+@media screen and (max-width:600px){
+	aside{		
+		width:50px;
+	}		
+}

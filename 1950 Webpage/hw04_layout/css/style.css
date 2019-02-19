@@ -1,0 +1,156 @@
+/* load reset rules first */
+@import url("../../css/normalize.css");
+a {
+  text-decoration: none;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 1rem;
+  background-color: #071d5a;
+  color: #d6d6d6;
+}
+
+header #branding {
+  font-size: 1.1rem;
+}
+
+header nav li {
+  display: inline;
+  padding-left: 1rem;
+}
+
+header nav li a:link {
+  color: #d6d6d6;
+}
+
+header nav li a:visited {
+  color: #afafaf;
+}
+
+header nav li a:hover {
+  color: #faaa15;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#content #sidenav {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-top: 40vh;
+}
+
+#content #sidenav ul {
+  padding: 0;
+}
+
+#content #sidenav li {
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+#content #sidenav li a:link {
+  color: #222222;
+}
+
+#content #sidenav li a:visited {
+  color: #858585;
+}
+
+#content #sidenav li a:hover {
+  color: #1f0fad;
+}
+
+#content main {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  padding-right: 3rem;
+}
+
+#content main .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#content main .container h1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#content main .container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 1rem;
+}
+
+#content main form fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 20rem;
+}
+
+table tr:nth-of-type(2n) {
+  background-color: #a29cc479;
+}
+
+table tr:nth-of-type(2n+1) {
+  background-color: #684eff7e;
+}
+
+footer {
+  background-image: url("http://www.elsa-belgium.org/wp-content/uploads/2014/12/footer-background-011-1.jpg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer p {
+  color: #e4e4e4;
+}
+
+footer a {
+  margin: 1rem;
+  color: #e4e4e4;
+}
+/*# sourceMappingURL=style.css.map */

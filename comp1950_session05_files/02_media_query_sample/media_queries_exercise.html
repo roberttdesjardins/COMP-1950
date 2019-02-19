@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+
+	<!-- These media queries are defined externally... -->
+	<link rel="stylesheet" href="css/style_exercise.css" />
+
+	<!-- Mobile viewport consideration 
+		  this will deal with those pesky 'retina' displays
+		  that can make a physically small device 
+		  appear much larger to a media query
+	-->	
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	</head>
+	<body>
+		<h1>Media Queries</h1>
+
+		<p>Examine the .css source code, note the @media queries to see how the width detection is functioning. Be sure to alter the width of your browser to trigger different media queries.</p>
+		<p>Implement the same functionality testing for height and orientation.</p>
+		
+		<h3>Width detection...</h3>
+		<div id="widescreen">Viewport has 1600px or greater width available</div>
+		<div id="fullscreen">Viewport is 1024-1599px wide</div>
+		<div id="medium">Viewport is 500-1023px wide</div>
+		<div id="thin">Viewport is less than 500px wide</div>
+		
+		<h3>Is the browser tall or short?</h3>
+		<div><span id="tall">Tall - viewport is taller than 499px</span><span id="short">Short - viewport is shorter than 500px</span></div>
+		
+		<h3>Landscape or Portrait?</h3>
+		<div><span id="landscape">Landscape</span><span id="portrait">Portrait</span></div>		
+	</body>
+</html>

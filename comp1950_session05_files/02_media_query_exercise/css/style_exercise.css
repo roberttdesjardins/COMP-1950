@@ -1,0 +1,86 @@
+/*
+styles that have no media query requirements will 
+of course be applied in all cases, 
+unless the media query rules should override
+rules declared here
+*/
+body{
+	color:white;
+}
+/* add this to .css for Windows Mobile IE */
+@-ms-viewport {
+	width:device-width;
+}
+
+/* and now the media queries... */
+/* 
+for devices thinner than typical laptops,
+eg: smartphones
+*/
+@media screen and (min-width:0px){
+	#widescreen{		display:none;	}
+	#fullscreen{		display:none;	}
+	#medium{			display:none;	}
+	#thin{				display:block;	}
+	body{	background-color:teal;	}
+}
+/* for low res desktop/laptop */
+@media screen and (min-width:500px){
+	#widescreen{		display:none;	}
+	#fullscreen{		display:none;	}
+	#medium{			display:block;	}
+	#thin{				display:none;	}
+	body{	background-color:yellow;	color:black; }
+}
+/* for typical desktop/laptop arrangements */
+@media screen and (min-width:1024px){
+	#widescreen{		display:none;	}
+	#fullscreen{		display:block;	}
+	#medium{			display:none;	}
+	#thin{				display:none;	}
+	body{	background-color:darkslategray;	color:white}
+}
+/* for super wide screens */
+@media screen and (min-width:1600px){
+	#widescreen{		display:block;	}
+	#fullscreen{		display:none;	}
+	#medium{			display:none;	}
+	#thin{				display:none;	}
+	body{	background-color:darkslateblue;	}
+}
+
+@media screen and (min-height:0px) {
+	#tall {
+		display: none;
+	}
+	#short {
+		display: block;
+	}
+}
+@media screen and (min-height:500px) {
+	#tall {
+		display: block;
+	}
+	#short {
+		display: none;
+	}
+}
+
+@media screen and (orientation: portrait) {
+	#landscape {
+		display: none;
+	}
+	#portrait {
+		display: block;
+	}
+}
+
+
+@media screen and (orientation: landscape) {
+	#portrait {
+		display: none;
+	}
+	#landscape {
+		display: block;
+	}
+}
